@@ -20086,9 +20086,10 @@ SUVORK5CYII=
 <ul>
 <li>The first principle component has a variance of <code>0.4764</code> and the second principle has <code>0.2527</code> which would make the total <code>0.7291</code> or 72%</li>
 <li>The first four principle components would be <code>0.4764</code> + <code>0.2527</code> + <code>0.1176</code> + <code>0.0883</code> which in total would be <code>0.935</code> 93%</li>
-<li>The first dimension saw an increase in Frozen, and Fresh while all the other features were given negatvie weights as they do not have good enough variance to be considered a principle component. The second dimension saw that none of the features were considered maximum in terms of variance. This is obviously not a good choice as we need at least one feature to be present. The thrid dimension saw positive weights for Milk, Frozen, Decatessen, &amp; grocery. The highest of these was Frozen &amp; delicatessen which would be the features that these features are correlated as they both show positive weights.The 4th dimension sees positive weights for Delicatessen, Milk, Grocery showing their correlation although the weight is much smaller for grocery than it is for milk.
-**</li>
+<li>The first dimension saw an increase in Frozen, and Fresh while all the other features were given negatvie weights as they do not have good enough variance to be considered a principle component. The second dimension saw that none of the features were considered maximum in terms of variance. This is obviously not a good choice as we need at least one feature to be present. The thrid dimension saw positive weights for Milk, Frozen, Decatessen, &amp; grocery. The highest of these was Frozen &amp; delicatessen which would be the features that these features are correlated as they both show positive weights.The 4th dimension sees positive weights for Delicatessen, Milk, Grocery showing their correlation although the weight is much smaller for grocery than it is for milk.</li>
 </ul>
+<p>For the negative weights Dimension two shows that all the features have a variance that is more negatively weighted. For example Fresh, Frozen, &amp; Delicatessen are inverseley correlated as they all have values between -3 ~ -7 in this dimension of two. It is also the only dimension that shows all the features inversley correlated. In Dimension one there is a split between Delicatessen, Detergent papers, Grocery, milk which are inveserly correlated with Frozen and Fresh which are positvely correlated. This suggest that in dimesnion one Fresh and Frozen items are purchased together which makes sense. However, in Dimension 2 it is not possible to find a positve correlation with all the purchases of the features because they are negatively correlated.</p>
+<p>**</p>
 
 </div>
 </div>
@@ -23836,9 +23837,11 @@ Sample point 2 predicted to be in Cluster 0
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>**Answer:</p>
 <ul>
-<li>point 0 is predicted to have been in the first segment which I labeled as the restaurant. Based on the data set this prediction looks to be wrong as my sample data set considered the first item to be a hotel record.</li>
-<li>Point 1 is predicted to be in the restuarant group which is correct as that is the middle segment that was chosen was correctly clustered in my restaurant segment.</li>
-<li>Point 2 was labeled to be the hotel segment and the prediction is consisten with what was chosen earlier as well.</li>
+<li><p>point 0 is predicted to have been in the first segment which I labeled as the restaurant. Based on the data set this prediction looks to be wrong as my sample data set considered the first item to be a hotel record. Fresh in segment 1 has a value just over 8000 and the mean for fresh is 12000.297727. This says that this customer spends below the average, so it makes sense that it could not be the restaurant as I'd expect restaurant to spend heavily on fresh items. The clustering algorithm seems to found this relationship.</p>
+</li>
+<li><p>Point 1 is predicted to be in the restuarant group which is correct as that is the middle segment that was chosen was correctly clustered in my restaurant segment. In segment 1 we can see thatm fresh is a big spending catagory and the second record in the data set made a huge spend in this area relatively close to the mean of 12000.297727. Restaurants would likely spend more money on Fresh items, so this cluster grouping for this item makes sense</p>
+</li>
+<li>Point 2 was labeled to be the hotel segment and the prediction is consistent with what was chosen earlier. The segment 0 chart shows heavy spending on Grocery milk and detergent paper which are all relatviely close to the mean in Q1. For example the mean for Detergent paper is 2881.493182 and our data point spent just above this a 4,000+. I expect hotels to spend much in this category due to room cleaning etc. Groceries and Milk are also above their means which makes me thing that this clustering is correct as well.</li>
 </ul>
 <p>The best representative is segment 0 as this really shows more variations in the features even after the dimenionality reduction. The predictions seem to be pretty consistent with the data charts listed above.</p>
 <p>**</p>
